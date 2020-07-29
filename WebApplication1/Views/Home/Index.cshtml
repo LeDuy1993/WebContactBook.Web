@@ -1,0 +1,25 @@
+﻿@{
+    ViewData["Title"] = ViewBag.Title;
+}
+
+    <div class="text-center">
+        <h1 class="display-4">Welcome</h1>
+        <div class="row form-group">
+            <div class="col-6">
+                <label>Course</label>
+                <select id="CourseSelect" onchange="myCourse()">
+                </select>
+            </div>
+            <div class="col-6">
+                <label>Grade</label>
+                <select id="GradeSelect" onchange="myGrade()">
+                </select>
+
+            </div>
+        </div>
+       
+    </div>
+
+@section Scripts{
+    <script src="~/js/home.js" asp-append-version="true"></script>
+}
