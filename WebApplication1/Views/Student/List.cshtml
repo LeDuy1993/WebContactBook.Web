@@ -1,0 +1,38 @@
+﻿@using WebContactBook.Web.Models.Class
+@{
+    ViewData["Title"] = ViewBag.Title;
+    var classRoom = ViewBag.classRoom != null ? ViewBag.classRoom as GetClassByClassId : new GetClassByClassId();
+}
+
+<div class="row">
+      <input hidden id="classId" value="@classRoom.ClassId" />
+    <div class="col-12 mb-3">
+        <a  href="/Home" class="btn btn-info">Back</a>
+    </div>
+</div>
+<div>
+ 
+    <select class="selectpicker" id="SemesterId" >
+    </select>
+    <select class="selectpicker" id="SubjectId" >
+    </select>
+</div>
+<table id="tbStudent" class="table table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>Student Id</th>
+            <th>Full Name</th>
+            <th>Gender</th>
+            <th>DayOfBirth</th>
+            <th>PhoneNumber</th>
+        </tr>
+    </thead>
+    <tbody>
+    </tbody>
+</table>
+
+
+
+@section Scripts{
+    <script src="~/js/student.js" asp-append-version="true"></script>
+}
